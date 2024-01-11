@@ -1,0 +1,47 @@
+﻿ @model E_commerce1.Models.UpdateProduitViewModel
+@{
+}
+
+
+<h1> Modifier Produit</h1>
+<form method="post" action="View" class="mt-5">
+
+    <div class="mb-3">
+        <label for="" class="form-label">ID</label>
+        <input type="text" class="form-control" asp-for="idProduit"
+        readonly asp-validation-for="idProduit.HasUniqueValue">
+        <span asp-validation-message for="idProduit.HasUniqueValue"
+        class="text-danger"></span>
+    </div>
+
+    
+
+    <div class="mb-3">
+        <label for="" class="form-label">Nom Produit</label>
+        <input type="text" class="form-control" asp-for="nomProduit">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Prix en DT</label>
+        <input type="text" class="form-control"  asp-for="prix">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Réference</label>
+        <input type="text" class="form-control" asp-for="reference">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Description</label>
+        <input type="text" class="form-control" asp-for="description">
+    </div>
+    
+    
+    <button type="submit" class="btn btn-primary">Modifier</button>
+
+    <button type="submit" class="btn btn-danger"
+    asp-action="Delete"
+    asp-controller="Produit">Supprimer</button> 
+    
+
+</form>

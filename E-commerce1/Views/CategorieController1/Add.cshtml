@@ -1,0 +1,27 @@
+﻿@model E_commerce1.Models.AddCategorieViewModel
+@{
+}
+
+<h1> Ajouter Categorie </h1>
+<form method="post" action="Add" class class="mt-5">
+
+
+    <div class="mb-3">
+        <label for="" class="form-label">ID</label>
+        <input type="text" class="form-control" asp-for="idCategorie" asp-validation-for="idCategorie.HasUniqueValue">
+        <span asp-validation-message for="idCategorie.HasUniqueValue" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Nom Categorie</label>
+        <input type="text" class="form-control" asp-for="nomCategorie">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+
+
+
+
+
+</form>

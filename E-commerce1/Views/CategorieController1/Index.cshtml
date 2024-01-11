@@ -1,0 +1,31 @@
+﻿@model List<E_commerce1.Models.Domain.Categorie>
+@{
+}
+
+<h1>Produits</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom Categorie</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var categorie in Model)
+
+        {
+            <tr>
+                <td>@categorie.idCategorie</td>
+                <td>@categorie.nomCategorie</td>
+
+
+                <td> <a href="CategorieController1/View/@categorie.idCategorie">Modifier</a></td>
+
+            </tr>
+        }
+        </tbody>
+        </table>
+

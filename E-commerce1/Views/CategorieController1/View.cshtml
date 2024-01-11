@@ -1,0 +1,32 @@
+﻿@model E_commerce1.Models.UpdateCategorieViewModel
+@{
+}
+
+<h1> Modifier Categorie</h1>
+<form method="post" action="View" class="mt-5">
+
+    <div class="mb-3">
+        <label for="" class="form-label">ID</label>
+        <input type="text" class="form-control" asp-for="idCategorie"
+               readonly asp-validation-for="idCategorie.HasUniqueValue">
+        <span asp-validation-message for="idCategorie.HasUniqueValue"
+              class="text-danger"></span>
+    </div>
+
+
+
+    <div class="mb-3">
+        <label for="" class="form-label">Nom Categorie</label>
+        <input type="text" class="form-control" asp-for="nomCategorie">
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Modifier</button>
+
+    <button type="submit" class="btn btn-danger"
+            asp-action="Delete"
+            asp-controller="CategorieController1">
+        Supprimer
+    </button>
+</form>
